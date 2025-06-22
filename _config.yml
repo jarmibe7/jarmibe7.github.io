@@ -105,10 +105,6 @@ newsletter:
 collections:
   books:
     output: true
-  news:
-    defaults:
-      layout: post
-    output: true
   projects:
     output: true
 
@@ -157,6 +153,7 @@ keep_files:
 
 # Plug-ins
 plugins:
+  - jekyll-archives-v2
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
