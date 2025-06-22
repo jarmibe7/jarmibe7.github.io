@@ -63,51 +63,26 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather.html";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+            },},{id: "projects-ergodic-control-in-exploration",
+          title: 'Ergodic Control in Exploration',
+          description: "An active learning agent that uses ergodic  control and iLQR to find a hidden box.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project.html";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+              window.location.href = "/projects/proj_ergodic.html";
+            },},{id: "projects-pick-and-place-mobile-manipulation",
+          title: 'Pick-and-Place Mobile Manipulation',
+          description: "Pick-and-place mobile manipulation tasks with a KUKA youBot, starting from an initial condition with an arbitrary error relative to a desired trajectory.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project.html";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+              window.location.href = "/projects/proj_mob_man.html";
+            },},{id: "projects-pid-motor-controller-and-client",
+          title: 'PID Motor Controller and Client',
+          description: "A robust PID motor controller in C on the PIC32MX270F256B microcontroller, with a Python client.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project.html";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+              window.location.href = "/projects/proj_mot_con.html";
+            },},{id: "projects-simulated-soccer-juggling",
+          title: 'Simulated Soccer Juggling',
+          description: "A physically reasonable representation of soccer juggling with Lagrangian dynamics, with a custom feedback control system.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project.html";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project.html";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project.html";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project.html";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project.html";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project.html";
+              window.location.href = "/projects/proj_soc_sim.html";
             },},{
         id: 'social-email',
         title: 'email',
