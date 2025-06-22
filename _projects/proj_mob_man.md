@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: Pick-and-Place Mobile Manipulation
+description: Pick-and-place mobile manipulation tasks with a KUKA youBot, starting from an initial condition with an arbitrary error relative to a desired trajectory.
+img: assets/img/thumb_mobile_manipulation.png
+importance: 2
+category: work
 ---
 
 Every project has a beautiful feature showcase page.

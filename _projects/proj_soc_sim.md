@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: Simulated Soccer Juggling
+description: A physically reasonable representation of soccer juggling with Lagrangian dynamics, with a custom feedback control system.
+img: assets/img/thumb_juggling.png
+# redirect: https://unsplash.com
 importance: 3
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
