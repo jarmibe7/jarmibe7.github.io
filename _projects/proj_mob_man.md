@@ -7,74 +7,65 @@ importance: 2
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project was associated with Northwestern University ME 449: Robotic Manipulation (Fall 2024).
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## Introduction
+#### Objective
+The goal of this project was to perform pick-and-place mobile manipulation tasks with a KUKA youBot, starting
+from an initial condition with an arbitrary error relative to a desired trajectory.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+#### Process Outline
+1. Create a reference trajectory based on the initial and goal configurations of a target object.
+2. Use forward kinematics to get the current configuration of the end-effector for each reference frame.
+3. Use feedforward + PI control to determine the current error from the expected reference frame.
+4. Plan a corrective end-effector twist based on this error and the next frame in the trajectory.
+5. Calculate the manipulator Jacobian and the necessary wheel and joint speeds to reach the next reference frame.
+6. Integrate wheel and joint speeds to reach the desired reference frame.
+7. Apply joint limits to prevent singularities and self-collisions.
+8. Repeat steps 2-7 for entire reference trajectory.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Results
+### Feedforward + PI Control with minimal overshoot
+The goal for this stage was to design an optimized controller that enables the youBot to perform a 
+pick-and-place task with minimal overshoot. This controller was tested with multiple pick-and-place
+tasks. Generally, the transient error converged quickly, and the youBot was able to perform all
+tasks successfully. The figure below is the result from one such pick-and-place task, demonstrating the convergence
+of the transient error after an incorrect initial configuration.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+![best_errors.png](/assets/img/project_img/mob_man/best_errors.png)
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+Here is a video demonstration of the optimized controller.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+![best_demo.gif](/assets/img/project_img/mob_man/best_demo.gif)
 
-{% raw %}
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### Feedforward + PI Control with overshoot
+The task for this stage was to design a controller that causes the youBot to perform a 
+pick-and-place task with significant overshoot, but a responsive transient convergence. 
+This allowed me to prove the versatility of my controller, and demonstrate my depth of knowledge. 
+The figure below demonstrates an initial overshoot, followed by a rapid convergence back to the
+desired trajectory.
 
-{% endraw %}
+![overshoot_errors.png](/assets/img/project_img/mob_man/overshoot_errors.png)
+
+Here is a video demonstration of the controller with overshoot.
+
+![overshoot_demo.gif](/assets/img/project_img/mob_man/overshoot_demo.gif)
+
+#### Software Format
+- main.py<br>
+This file allows the user to run the code. It contains the simulation
+loop, and functions to load the robot kinematics and system parameters. It also
+has helper functions to calculate the manipulator jacobian and plot the errors.
+
+- trajectory_generator.py<br>
+This file contains the function to generate the reference trajectory. The time for each
+trajectory segment is calculated dynamically using the distance of the trajectory and a 
+joint speed parameter.
+
+- feedback_control.py<br>
+This file contains the feedforward + PI feedback control function. It also contains the function TestJointLimits, 
+which tests for self-collisions and singularities, and modifies the manipulator Jacobian accordingly.
+
+- simulator.py<br>
+This file contains the NextState function, which simulates a single timestep of the robot's movement.
