@@ -8,74 +8,33 @@ importance: 3
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project was associated with Northwestern University ME 314: Theory of Machines - Dynamics (Fall 2024).
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+![animation_demo.gif](/assets/img/project_img/soc_sim/animation_demo.gif)
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Introduction
+#### Objective and Project Description
+I've always loved soccer, and have been playing since I was a child. When I was younger I used to play a juggling game, in which I would practice juggling the soccer ball against my garage door, trying to keep it from touching the ground. The goal of this project was to create a physically reasonable representation of soccer juggling with Lagrangian dynamics, while also tying in ideas from my interests in robotics and control systems.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+<img src="/assets/img/project_img/soc_sim/system_diagram.png" alt="system diagram" style="max-width: 100%; height: auto;" />
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+My system consists of 2 walls (left and right), a floor, a leg (represented as an actuated double pendulum) and a ball (represented by a cube). There are 5 state variables: the 2 pendulum angles, and the coordinates of the cube as well as its rotation. Planar gravity is acting on all objects in the system, with the double pendulum and cube also having planar rotational inertia.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+#### Process Outline
+All code is in an IPython Notebook, and organized into sections. This is the general structure:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+1. Define system parameters and inertia matrices.
+2. Create helper functions for manipulating SE3 matrices (inverse, skew-symmetric, derivatives, conversion to 6-dimensional twist).
+3. Calculate all necessary frame transformations.
+4. Compute the system's kinetic energy, potential energy, and Lagrangian.
+5. Define all 20 potential impacts, and create impact equations.
+6. Create PD controller and custom conditional force equation.
+7. Evaluate forced Euler-Lagrange equations.
+8. Create numerical impact update, simulation, and integration functions.
+9. Simulate and plot system trajectory.
+10. Animate system with custom animation function.
 
-{% raw %}
+## Results
+My dynamics simulation is a physcially reasonable depiction of soccer juggling. Below is the final version of a plot I used during development to determine the success of my simulation. It displays the dynamics of all state variables, and their adherence to their respective impact constraints.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+<img src="/assets/img/project_img/soc_sim/trajectory_plot.png" alt="trajectory plot" style="max-width: 100%; height: auto;" />
