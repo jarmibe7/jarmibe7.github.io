@@ -7,74 +7,70 @@ importance: 4
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project was associated with Northwestern University ME 333: Mechatronics (Winter 2025).
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+![motor_demo.gif](/assets/img/project_img/mot_con/motor_demo.gif)
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+#### Objective
+The goal of this project was to create a motor controller in C on the PIC32MX270F256B microcontroller, with a Python client.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+#### Hardware and Project Description
+The motor controller and command menu is a robust interface that allows the user to specify constant speeds, contstant postions,
+step trajectories, and cubic trajectories. There are also commands for reading sensors and internal controller state. 
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+The motor is controlled using a variable 20 kHz PWM signal, the duty cycle of which is controlled by a PID controller inside a 5kHz ISR. The user can specify a constant PWM with duty cycle between -100 and 100 (bidirectional). An additional 200 Hz ISR with a PID position controller can be used to hold a constant angle or follow either a step or cubic trajectory. This is accomplished by calculating a desired motor torque, and then using the current controller to follow the current required for this torque. The Python client plots both reference and followed trajectories, and calculates a performance score.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+<img src="/assets/img/project_img/mot_con/block_diagram.png" alt="block diagram" style="max-width: 100%; height: auto;" />
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+The motor controller code runs on the PIC32 microcontroller, which controls most of the logic and runs on a 3.3V power supply. A Raspberry Pi Pico Mini is also used for reading the motor encoder data, which is then sent to the PIC32 with a UART connection. The PIC32 communicates with an INA219 current sensor using an I2C protocol for accurate motor current measurements. Lastly, a bidirectional H-Bridge with an external 6V power supply is used to allow for robust control of the motor. The PIC32 microcontroller is part of a circuit named the NU32 Dev Board, which is a breadboard setup used throughout the course. The controller circuit diagram is pictured below, followed by the diagram for the NU32 Dev Board.
 
-{% raw %}
+<img src="/assets/img/project_img/mot_con/controller_circuit.png" alt="controller circuit" style="max-width: 100%; height: auto;" />
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+<img src="/assets/img/project_img/mot_con/NU32dev_circuit.png" alt="NU32 dev circuit" style="max-width: 100%; height: auto;" />
 
-{% endraw %}
+Lastly, the Python client provides the user with a wide array of commands to access the controller's various capabilities. It also contains functions for trajectory generation and plotting.
+
+<img src="/assets/img/project_img/mot_con/client_menu.png" alt="client menu" style="max-width: 100%; height: auto;" />
+
+#### Results
+
+As seen in the video demo, the motor follows each trajectory precisely, and then holds the final position until directed otherwise. Additionally, the cubic trajectory plot and corresponding current controller gain error plot are included for reference.
+
+<img src="/assets/img/project_img/mot_con/cubic_plot.png" alt="cubic plot" style="max-width: 100%; height: auto;" />
+
+<img src="/assets/img/project_img/mot_con/current_plot.png" alt="current plot" style="max-width: 100%; height: auto;" />
+
+#### Software Format
+The software is split up into modules, each controlling a different task, peripheral, or sensor. Each module contains a header file and a corresponding .c file.
+
+- current_control<br>
+This module contains functions for PID current control, based on user inputted gains. It also contains functions for setting up the current sensor, creating reference signal arrays, and communicating with the client.
+
+- encoder<br>
+This module contains functions for reading raw encoder data, converting to degrees, and setting up the UART connection to the Raspberry Pi Pico.
+
+- i2c_master_noint<br>
+This file contains I2C master utilities using 400 kHz polling rather than interrupts. The functions must be callled in the correct order as per the I2C protocol.
+
+- ina219<br>
+This file contains code for initializing and readng the INA219 current sensor.
+
+- main<br>
+This module interfaces with the Python client to allow user input. It contains the command directory, and also
+initializes all sensors and peripherals. 
+
+- nu32dip<br>
+This module provides the setup code written by Nick Marchuk for the NU32 Dev Board.
+
+- position_control<br>
+This module contains functions for PID position control, based on user inputted gains. It also contains functions for sending and receiving calculated trajectories between the client.
+
+- utilities<br>
+This module contains constants and functions used to control the active state of the motor controller.
+
+- client.py<br>
+This file contains the UI code for the client. This entails reading user input, sending data to the PIC32 microcontroller with a serial port connection, and receiving information back.
+
+- traj_plot.py<br>
+This file contains a function for calculating interpolated user trajectories based on via point inputs. It also contains functions for plotting position and current gain performance.
+
