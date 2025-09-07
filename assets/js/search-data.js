@@ -42,6 +42,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather.html";
+            },},{id: "projects-icorr-2025-paper",
+          title: 'ICORR 2025 Paper',
+          description: "Estimation of upper limb function in stroke patients with IMU data.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/proj_arat.html";
             },},{id: "projects-autonomous-quadrotor-control",
           title: 'Autonomous Quadrotor Control',
           description: "Manual and autonomous control of a quadrotor, using PID control and computer vision.",
