@@ -42,6 +42,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather.html";
+            },},{id: "projects-autonomous-quadrotor-control",
+          title: 'Autonomous Quadrotor Control',
+          description: "Manual and autonomous control of a quadrotor, using PID control and computer vision.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/proj_drone.html";
             },},{id: "projects-ergodic-control-in-exploration",
           title: 'Ergodic Control in Exploration',
           description: "An active learning agent that uses ergodic  control and iLQR to find a hidden box.",
