@@ -1,7 +1,7 @@
 ---
 layout: page
 title: ICORR 2025 Paper
-description: Estimation of upper limb function in stroke patients with IMU data.
+description: I created a model that estimates upper limb function in stroke patients, using features extracted from IMU data. I published a paper to a top rehab robotics conference, which was nominated for best paper.
 img: assets/img/project_img/arat/group_photo.jpg
 importance: 3
 related_publications: true
@@ -39,7 +39,7 @@ Below is a diagram of our model structure and training/validation process.
 <iframe 
   src="/assets/img/project_img/arat/figure1.pdf" 
   width="100%" 
-  height="600px" 
+  height="400px" 
   style="border: none;">
 </iframe>
 
@@ -59,6 +59,6 @@ A great deal of consideration was given to clinical interpretability throughout 
 <iframe 
   src="/assets/img/project_img/arat/figure3.pdf" 
   width="100%" 
-  height="600px" 
+  height="400px" 
   style="border: none;">
 </iframe>
