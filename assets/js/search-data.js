@@ -44,7 +44,7 @@ ninja.data = [{
               window.location.href = "/books/the_godfather.html";
             },},{id: "projects-icorr-2025-paper",
           title: 'ICORR 2025 Paper',
-          description: "Estimation of upper limb function in stroke patients with IMU data.",
+          description: "I created a model that estimates upper limb function in stroke patients, using features extracted from IMU data. I published a paper to a top rehab robotics conference, which was nominated for best paper.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/proj_arat.html";
             },},{id: "projects-autonomous-quadrotor-control",
