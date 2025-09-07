@@ -2,7 +2,7 @@
 layout: page
 title: Autonomous Quadrotor Control
 description: Manual and autonomous control of a quadrotor, using PID control and computer vision.
-img: assets/img/drone/Jared_Berry_Candid.jpg
+img: assets/img/project_img/drone/Jared_Berry_Candid.jpg
 importance: 3
 category: work
 ---
@@ -11,7 +11,7 @@ This project was associated with Northwestern University ME 410: Quadrotor Desig
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe 
-    src="https://youtube.com/shorts/pwBwrjdDeMI" 
+    src="https://youtube.com/embed/pwBwrjdDeMI" 
     frameborder="0" 
     allowfullscreen 
     style="position: absolute; top:0; left: 0; width: 100%; height: 100%;">
