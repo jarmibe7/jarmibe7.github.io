@@ -24,7 +24,7 @@ This project was associated with the Human AugmentatioN Via Dexterity Engineerin
 
 My research grant was part of the NSF's Research Experience for Undergraduates (REU) program. Below is a picture of me with the rest of the REU cohort and Professors Gharib and Colgate, who serve as the REU Coordinator and HAND ERC Director respectively. 
 
-<img src="/assets/img/project_img/dexnex/cohort.jpg" alt="cohort" style="max-width: 100%; height: auto;" />
+<img src="/assets/img/project_img/dexnex/cohort.JPG" alt="cohort" style="max-width: 100%; height: auto;" />
 
 HAND ERC is a center that aims to develop highly dexterous robots to augment human labor and make robots easier to use. They are the most prominent dexterous robotics hub in the country, and aim to revolutionize the field in the next few years. My team's goal is to create a suite of autonomous manipulation skills that can be used out of the box, making robotics more approachable for small to medium sized manufacturers.
 
@@ -90,7 +90,7 @@ Moving forward I will be continuing my work on the RL pipeline, and working to d
 <iframe 
   src="/assets/img/project_img/dexnex/poster.pdf" 
   width="100%" 
-  height="800px" 
+  height="600px" 
   style="border: none;">
 </iframe>
 

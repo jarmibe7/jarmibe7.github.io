@@ -68,6 +68,6 @@ Below is my final poster from the research symposium.
 <iframe 
   src="/assets/img/project_img/arat/poster.pdf" 
   width="100%" 
-  height="800px" 
+  height="600px" 
   style="border: none;">
 </iframe>
