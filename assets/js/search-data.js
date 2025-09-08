@@ -47,6 +47,11 @@ ninja.data = [{
           description: "I created a model that estimates upper limb function in stroke patients, using features extracted from IMU data. I published a paper to a top rehab robotics conference, which was nominated for best paper.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/proj_arat.html";
+            },},{id: "projects-reinforcement-learning-for-autonomous-dexterous-manipulation",
+          title: 'Reinforcement Learning for Autonomous Dexterous Manipulation',
+          description: "Used state-of-the-art reinforcement learning techniques to improve sim-to-real transfer of autonomous dexterous manipulation skills.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/proj_dexnex.html";
             },},{id: "projects-autonomous-quadrotor-control",
           title: 'Autonomous Quadrotor Control',
           description: "Manual and autonomous control of a quadrotor, using PID control and computer vision.",
