@@ -15,7 +15,7 @@ horizontal: false
 {% assign projects_with_rank = "" | split: "" %}
 
 {% for project in site.projects %}
-  {% assign rank = site.data.project_order[project.project_id] | default: 999 %}
+  {% assign rank = site.data.project_order[project.project_id] | default: 999 | plus: 0 %}
   {% assign project = project | merge: { "rank": rank } %}
   {% assign projects_with_rank = projects_with_rank | push: project %}
 {% endfor %}
