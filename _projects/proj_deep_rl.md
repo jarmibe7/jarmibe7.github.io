@@ -9,14 +9,6 @@ category: work
 
 This project was associated with Northwestern University ME 469: Machine Learning and Artificial Intelligence for Robotics.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe 
-    src="https://drive.google.com/file/d/134RrAXvoRoePCivQ5qLAl-FVsIevaFr8/preview" 
-    width="100%" height="480" allow="autoplay"
-    style="position: absolute; top:0; left: 0; width: 100%; height: 100%;">
-  </iframe>
-</div>
-
 ## Introduction
 #### Objective
 The goal of this project was to learn pathfinding with RL. While A* is a widely used path planning algorithm in robotics, RL and other learning-based approaches can be model-free, more adaptive, and allow more optimization design choices.
