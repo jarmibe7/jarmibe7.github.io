@@ -3,7 +3,7 @@ layout: page
 title: Reinforcement Learning for Autonomous Dexterous Manipulation
 description: Used state-of-the-art reinforcement learning techniques to improve sim-to-real transfer of autonomous dexterous manipulation skills.
 img: assets/img/project_img/dexnex/almost_grab.png
-id: dexnex
+project_id: dexnex
 category: work
 related_publications: false
 math: false

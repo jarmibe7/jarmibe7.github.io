@@ -3,7 +3,7 @@ layout: page
 title: Deep RL from Scratch
 description: Custom Deep RL, including a simple Gymnasium implementation, neural net from scratch, and the Deep A2C + vanilla tabular Q-Learning algorithms.
 img: assets/img/thumb_deep_rl.png
-id: deep_rl
+project_id: deep_rl
 category: work
 ---
 

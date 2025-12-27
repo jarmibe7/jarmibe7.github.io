@@ -4,6 +4,7 @@ ergodic: 3
 arat: 4
 deep_rl: 5
 mob_man: 6
-drone: 7
-soc_sim: 8
-mot_con: 9
+filter: 7
+drone: 8
+soc_sim: 9
+mot_con: 10
