@@ -3,7 +3,7 @@ layout: page
 title: Autonomous Quadrotor Control
 description: Manual and autonomous control of a quadrotor, using PID control and computer vision.
 img: assets/img/project_img/drone/Jared_Berry_Candid.jpg
-importance: 5
+importance: 6
 category: work
 ---
 

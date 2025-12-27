@@ -3,7 +3,7 @@ layout: page
 title: Pick-and-Place Mobile Manipulation
 description: Pick-and-place mobile manipulation tasks with a KUKA youBot, starting from an initial condition with an arbitrary error relative to a desired trajectory.
 img: assets/img/thumb_mobile_manipulation.png
-importance: 4
+importance: 5
 category: work
 ---
 
