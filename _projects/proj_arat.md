@@ -3,7 +3,7 @@ layout: page
 title: ICORR 2025 Paper
 description: I created a model that estimates upper limb function in stroke patients, using features extracted from IMU data. I published a paper to a top rehab robotics conference, which was nominated for best paper.
 img: assets/img/project_img/arat/group_photo.jpg
-importance: 4
+id: arat
 related_publications: false
 category: work
 ---

@@ -3,7 +3,7 @@ layout: page
 title: Ergodic Control in Exploration
 description: An active learning agent that uses ergodic  control and iLQR to find a hidden box.
 img: assets/img/thumb_ergodic_search.png
-importance: 3
+id: ergodic
 category: work
 related_publications: false
 math: true

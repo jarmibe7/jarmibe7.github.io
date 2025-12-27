@@ -3,7 +3,7 @@ layout: page
 title: Embed to Control
 description: Implementation of Embed to Control, a locally linear latent dynamics model for control from raw images.
 img: assets/img/thumb_e2c.jpg
-importance: 2
+id: e2c
 category: work
 ---
 

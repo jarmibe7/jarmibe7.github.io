@@ -3,7 +3,7 @@ layout: page
 title: PID Motor Controller and Client
 description: A robust PID motor controller in C on the PIC32MX270F256B microcontroller, with a Python client.
 img: assets/img/thumb_motor_controller.png
-importance: 8
+id: mot_con
 category: work
 ---
 
