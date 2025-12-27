@@ -72,6 +72,11 @@ ninja.data = [{
           description: "An active learning agent that uses ergodic  control and iLQR to find a hidden box.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/proj_ergodic.html";
+            },},{id: "projects-filtering-and-state-estimation",
+          title: 'Filtering and State Estimation',
+          description: "Implementation of Bayesian filtering algorithms, including EKF, regular + Augmented UKF, and Particle Filter.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/proj_filter.html";
             },},{id: "projects-pick-and-place-mobile-manipulation",
           title: 'Pick-and-Place Mobile Manipulation',
           description: "Pick-and-place mobile manipulation tasks with a KUKA youBot, starting from an initial condition with an arbitrary error relative to a desired trajectory.",
