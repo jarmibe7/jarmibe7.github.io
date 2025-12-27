@@ -47,6 +47,11 @@ ninja.data = [{
           description: "I created a model that estimates upper limb function in stroke patients, using features extracted from IMU data. I published a paper to a top rehab robotics conference, which was nominated for best paper.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/proj_arat.html";
+            },},{id: "projects-deep-rl-from-scratch",
+          title: 'Deep RL from Scratch',
+          description: "Custom Deep RL, including a simple Gymnasium implementation, neural net from scratch, and the Deep A2C + vanilla tabular Q-Learning algorithms.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/proj_deep_rl.html";
             },},{id: "projects-reinforcement-learning-for-autonomous-dexterous-manipulation",
           title: 'Reinforcement Learning for Autonomous Dexterous Manipulation',
           description: "Used state-of-the-art reinforcement learning techniques to improve sim-to-real transfer of autonomous dexterous manipulation skills.",
