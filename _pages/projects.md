@@ -9,28 +9,28 @@ nav_order: 3
 horizontal: false
 ---
 
-<!-- pages/projects.md -->
 <div class="projects">
 
-{% assign projects_with_rank = "" | split: "" %}
+{% assign sorted_projects = "" | split: "" %}
 
-{% for project in site.projects %}
-  {% assign rank = site.data.project_order[project.project_id] | default: 999 %}
-  {% assign padded_rank = rank | prepend: "000" | slice: -3, 3 %}
-  {% assign sort_key = padded_rank | append: "__" | append: project.project_id %}
-  {% assign project = project | merge: { "sort_key": sort_key } %}
-  {% assign projects_with_rank = projects_with_rank | push: project %}
+{%- comment -%}
+Build the sorted list by looping through the ranking file
+{%- endcomment -%}
+{% for project_id in site.data.project_order %}
+  {% assign proj = site.projects | where: "project_id", project_id | first %}
+  {% if proj %}
+    {% assign sorted_projects = sorted_projects | push: proj %}
+  {% endif %}
 {% endfor %}
 
 {% if site.enable_project_categories and page.display_categories %}
 
-  <!-- Display categorized projects -->
   {% for category in page.display_categories %}
     <a id="{{ category }}" href=".#{{ category }}">
       <h2 class="category">{{ category }}</h2>
     </a>
 
-    {% assign categorized_projects = projects_with_rank | where: "category", category | sort: "sort_key" %}
+    {% assign categorized_projects = sorted_projects | where: "category", category %}
 
     {% if page.horizontal %}
       <div class="container">
@@ -50,9 +50,6 @@ horizontal: false
   {% endfor %}
 
 {% else %}
-
-  <!-- Display projects without categories -->
-  {% assign sorted_projects = projects_with_rank | sort: "sort_key" %}
 
   {% if page.horizontal %}
     <div class="container">
