@@ -4,6 +4,11 @@ github_users:
 repo_description_lines_max: 4
 
 github_repos:
+  - jarmibe7/E2C
+  - jarmibe7/MyTorchRL
+  - jarmibe7/GenerativeModels
+  - jarmibe7/SuperSearch
+  - jarmibe7/StateEstimation
   - jarmibe7/ErgodicSearch
   - jarmibe7/MobileManipulation
   - jarmibe7/JuggleBot
