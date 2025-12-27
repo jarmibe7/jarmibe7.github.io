@@ -42,7 +42,7 @@ My experience includes:
 - Programming **intelligent systems** for robotic arms and mobile robots
 - **ML architecture design** for clinical research
 
-I'm especially passionate about making systems that model the world around them, and **learn** to **adapt** to their environments in real time.
+I'm especially passionate about making systems that model the world around them, and **learn** to **adapt** to their environments in real time. I also love working on robotic manipulation pipelines, and would love to continue this direction of work in my next role.
 
 ---
 
