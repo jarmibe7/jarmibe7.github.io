@@ -57,6 +57,11 @@ ninja.data = [{
           description: "Manual and autonomous control of a quadrotor, using PID control and computer vision.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/proj_drone.html";
+            },},{id: "projects-embed-to-control",
+          title: 'Embed to Control',
+          description: "Implementation of Embed to Control, a locally linear latent dynamics model for control from raw images.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/proj_e2c.html";
             },},{id: "projects-ergodic-control-in-exploration",
           title: 'Ergodic Control in Exploration',
           description: "An active learning agent that uses ergodic  control and iLQR to find a hidden box.",
