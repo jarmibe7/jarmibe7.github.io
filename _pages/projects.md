@@ -15,8 +15,10 @@ horizontal: false
 {% assign projects_with_rank = "" | split: "" %}
 
 {% for project in site.projects %}
-  {% assign rank = site.data.project_order[project.project_id] | default: 999 | plus: 0 %}
-  {% assign project = project | merge: { "rank": rank } %}
+  {% assign rank = site.data.project_order[project.project_id] | default: 999 %}
+  {% assign padded_rank = rank | prepend: "000" | slice: -3, 3 %}
+  {% assign sort_key = padded_rank | append: "__" | append: project.project_id %}
+  {% assign project = project | merge: { "sort_key": sort_key } %}
   {% assign projects_with_rank = projects_with_rank | push: project %}
 {% endfor %}
 
@@ -28,7 +30,7 @@ horizontal: false
       <h2 class="category">{{ category }}</h2>
     </a>
 
-    {% assign categorized_projects = projects_with_rank | where: "category", category | sort: "rank" %}
+    {% assign categorized_projects = projects_with_rank | where: "category", category | sort: "sort_key" %}
 
     {% if page.horizontal %}
       <div class="container">
@@ -50,7 +52,7 @@ horizontal: false
 {% else %}
 
   <!-- Display projects without categories -->
-  {% assign sorted_projects = projects_with_rank | sort: "rank" %}
+  {% assign sorted_projects = projects_with_rank | sort: "sort_key" %}
 
   {% if page.horizontal %}
     <div class="container">
