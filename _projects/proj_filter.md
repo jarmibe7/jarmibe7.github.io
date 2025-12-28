@@ -33,7 +33,7 @@ Next, the sigma points are passed through the motion model to generate a set of 
 
 If there is a new measurement available, it can be used to update the predicted belief. First, new sigma points are sampled from the prediction at the previous step. These sigma points are passed through the measurement model to produce a transformed set of measurements from which mean belief and covariances can be extracted. Finally, the belief update occurs through the typical Kalman filter update. This math can be seen in the figure below.
 
-<img src="/assets/img/project_img/filter/sig_samp.png" alt="sig samp" style="max-width: 100%; height: auto;" />
+<img src="/assets/img/project_img/filter/ukf_math.png" alt="ukf math" style="max-width: 100%; height: auto;" />
 
 The version of the UKF included in the original paper is sometimes referred to as the augmented UKF [2]. The augmented UKF algorithm involves an augmented state and covariance matrix, which incorporate the process and measurement noise into the sigma point sampling process. The augmented UKF also propagates this noise through the nonlinear models. The implementation of the augmented UKF is almost identical to the regular UKF except for two key differences: 1. The number of sigma points is now 2n_aug + 1 where n_aug is the dimension of the augmented state vector and 2. The transformed state/measurement and respective noise are separated after sigma point generation and passed through the nonlinear models together. The version of the UKF in this project can optionally be turned into the augmented UKF, and a comparison of the two methods will be made later on.
 
