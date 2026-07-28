@@ -17,9 +17,9 @@ social: true # includes social icons at the bottom of the page
 
 ### 👋 Hi, I'm Jared!
 
-I'm a **4th year mechanical engineering student at Northwestern University**, concentrating in **robotics**. Starting **Fall 2025**, I’ll also be pursuing a **Master’s in Mechanical Engineering (thesis track)** as a member of the [Interactive and Emergent Autonomy Lab](https://murpheylab.github.io/), led by Dr. Todd Murphey.
+Starting Fall 2026, I'll be a **mechanical engineering PhD student at Northwestern University**, as a member of the [Interactive and Emergent Autonomy Lab](https://murpheylab.github.io/), led by Dr. Todd Murphey. In Spring 2026 I graduated from Northwestern with a **BS and MS in Mechanical Engineering (thesis track)**, both concentrated in robotics.
 
-My thesis is about using latent world dynamics models to improve the robustness of robot control strategies, and elicit more optimal long-horizon decisions and planning strategies in uncertain environments. I will be pursuing industry research positions or further graduate study full time after my graduation in **June 2026**.
+For my MS thesis I developed a novel data collection method for online world model training, enabling robots to make accurate dynamics predictions with significantly less training data. Robots using this data collection also exhibited emergent exploratory behaviors, frequently performing long-horizon interactions with objects in the environment.
 
 ---
 
@@ -28,10 +28,10 @@ My thesis is about using latent world dynamics models to improve the robustness 
 I specialize in building **intelligent robotic systems** that blend:
 
 - Reinforcement learning
+- World models
 - Control theory  
 - Machine learning  
 - Simulation
-- Embedded Systems
 
 My experience includes:
 
