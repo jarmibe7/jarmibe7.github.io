@@ -32,11 +32,11 @@ tasks. Generally, the transient error converged quickly, and the youBot was able
 tasks successfully. The figure below is the result from one such pick-and-place task, demonstrating the convergence
 of the transient error after an incorrect initial configuration.
 
-![best_errors.png](/assets/img/project_img/mob_man/best_errors.png)
+![best_errors.png](../assets/img/project_img/mob_man/best_errors.png)
 
 Here is a video demonstration of the optimized controller.
 
-![best_demo.gif](/assets/img/project_img/mob_man/best_demo.gif)
+![best_demo.gif](../assets/img/project_img/mob_man/best_demo.gif)
 
 
 ### Feedforward + PI Control with overshoot
@@ -46,11 +46,11 @@ This allowed me to prove the versatility of my controller, and demonstrate my de
 The figure below demonstrates an initial overshoot, followed by a rapid convergence back to the
 desired trajectory.
 
-![overshoot_errors.png](/assets/img/project_img/mob_man/overshoot_errors.png)
+![overshoot_errors.png](../assets/img/project_img/mob_man/overshoot_errors.png)
 
 Here is a video demonstration of the controller with overshoot.
 
-![overshoot_demo.gif](/assets/img/project_img/mob_man/overshoot_demo.gif)
+![overshoot_demo.gif](../assets/img/project_img/mob_man/overshoot_demo.gif)
 
 #### Software Format
 - main.py<br>

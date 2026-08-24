@@ -8,7 +8,7 @@ related_publications: false
 category: work
 ---
 
-<img src="/assets/img/project_img/arat/group_photo.jpg" alt="group photo" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/arat/group_photo.jpg" alt="group photo" style="max-width: 100%; height: auto;" />
 
 ## [Paper Link Here](https://ieeexplore.ieee.org/abstract/document/11063104)
 
@@ -37,7 +37,7 @@ My main contributions were:
 Below is a diagram of our model structure and training/validation process.
 
 <iframe 
-  src="/assets/img/project_img/arat/figure1.pdf" 
+  src="../assets/img/project_img/arat/figure1.pdf" 
   width="100%" 
   height="400px" 
   style="border: none;">
@@ -52,12 +52,12 @@ Our results were overall very promising. We were able to achieve fairly accurate
 
 Below is a figure demonstrating the accuracy of each ARAT subcategory motor function estimation model.
 
-<img src="/assets/img/project_img/arat/scatter_subtotal.png" alt="group photo" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/arat/scatter_subtotal.png" alt="group photo" style="max-width: 100%; height: auto;" />
 
 A great deal of consideration was given to clinical interpretability throughout the duration of the project. Shirley Ryan AbilityLab values clinician input and rigorous analysis and understanding of results. Therefore, SHAP analysis was performed to determine the most prominently used features for motor function prediction in each ARAT subcategory. While an in depth discussion of this analysis can be found in the full paper, below is a figure demonstrating the important features and their respective subcategories.
 
 <iframe 
-  src="/assets/img/project_img/arat/figure3.pdf" 
+  src="../assets/img/project_img/arat/figure3.pdf" 
   width="100%" 
   height="400px" 
   style="border: none;">
@@ -66,7 +66,7 @@ A great deal of consideration was given to clinical interpretability throughout 
 Below is my final poster from the research symposium.
 
 <iframe 
-  src="/assets/img/project_img/arat/poster.pdf" 
+  src="../assets/img/project_img/arat/poster.pdf" 
   width="100%" 
   height="600px" 
   style="border: none;">

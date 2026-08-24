@@ -24,9 +24,9 @@ The goal of this project was to implement the architecture of Embed to Control: 
 #### E2C Overview
 E2C [1] is a latent world model architecture that is capable of learning and predicting the dynamics of nonlinear systems. First, raw images are encoded into a lower dimensional latent space. This latent variable is an abstract representation of the observed system state. The latent state at the next timestep is predicted from the latent state and control at the current timestep. This prediction is linearized by estimating the *A* and *B* matrices from the linear state space model. These matrices, along with a covariance matrix are neural network outputs. Using the linear state space model output and the predicted covariance, the following latent state can be acquired through reparameterization. The general architecture is displayed in the figures below.
 
-<img src="/assets/img/project_img/e2c/e2c_arch.png" alt="model arch" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/e2c/e2c_arch.png" alt="model arch" style="max-width: 100%; height: auto;" />
 
-<img src="/assets/img/project_img/e2c/transition.png" alt="transition" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/e2c/transition.png" alt="transition" style="max-width: 100%; height: auto;" />
 
 What I find particularly interesting about E2C is that the original authors were able to find a correlation between the spatial structure of the latent space and the dynamics of the original control problem. I've included some latent space visualizations for the Reacher environment in this project page as a comparison.
 
@@ -37,7 +37,7 @@ The first video on this page is a visualization of the performance our implement
 
 In the video, the left column shows the true and predicted current images, where the predicted current image is simply an encoded-decoded visualization. The right column shows the true and predicted future images (one timestep later). This visualization is particularly valuable when the true current and future images are drastically different, suggesting large control magnitudes. In these cases, the model is still able to accurately predict the future states.
 
-<img src="/assets/img/project_img/e2c/all_latent.jpg" alt="latent" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/e2c/all_latent.jpg" alt="latent" style="max-width: 100%; height: auto;" />
 
 In the figure above, the 2D joint spaces between each latent variable are visualized in a grid. It is unclear whether there is a spatial correlation between the latent space and the original Reacher dynamics, but at least the visualizations are nice to look at.
 

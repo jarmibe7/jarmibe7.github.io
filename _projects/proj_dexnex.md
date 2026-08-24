@@ -24,21 +24,21 @@ This project was associated with the Human AugmentatioN Via Dexterity Engineerin
 
 My research grant was part of the NSF's Research Experience for Undergraduates (REU) program. Below is a picture of me with the rest of the REU cohort and Professors Gharib and Colgate, who serve as the REU Coordinator and HAND ERC Director respectively. 
 
-<img src="/assets/img/project_img/dexnex/cohort.JPG" alt="cohort" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/dexnex/cohort.JPG" alt="cohort" style="max-width: 100%; height: auto;" />
 
 HAND ERC is a center that aims to develop highly dexterous robots to augment human labor and make robots easier to use. They are the most prominent dexterous robotics hub in the country, and aim to revolutionize the field in the next few years. My team's goal is to create a suite of autonomous manipulation skills that can be used out of the box, making robotics more approachable for small to medium sized manufacturers.
 
-<img src="/assets/img/project_img/dexnex/co-train_pipeline.png" alt="co-train" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/dexnex/co-train_pipeline.png" alt="co-train" style="max-width: 100%; height: auto;" />
 
 This summer I was funded by the NSF to develop a reinforcement learning (RL) pipeline for developing autonomous skills on a high DOF dexterous manipulation avatar named DexNex. More specifically, my pipeline was built to train a simulated policy that can be used with [Sim-and-Real Co-Training](https://arxiv.org/abs/2503.22634) to train a diffusion model, which we believe will improve our sim-to-real skill transfer. Co-Training involves using a smaller, real-world dataset in combination with a larger, more diverse simulated dataset to train an agent. The literature has shown significant improvements in performance from this approach. Above is a diagram of the Co-Training process we are using.
 
-<img src="/assets/img/project_img/dexnex/dexnex_real.jpg" alt="dexnex_real" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/dexnex/dexnex_real.jpg" alt="dexnex_real" style="max-width: 100%; height: auto;" />
 
 Dr. Russ Tedrake from MIT is one of our project leads, so we are using his lab's [Drake simulator](https://drake.mit.edu/) to do all of our simulation. Drake is a simulator they developed particularly for robotics and control applications. We are also using OpenAI's Gymnasium API for easy and generalizable environment functionality during the training process. The DexNex avatar is a bimanual manipulation avatar that can be controlled for teleoperation purposes using ROS2 and haptic gloves. Features include first-person VR support, touch feedback through the gloves, and real-time hand and head tracking. The picture above shows the DexNex avatar in action during a teleoperation test.
 
 #### RL Pipeline Overview
 
-<img src="/assets/img/project_img/dexnex/rl_pipeline.png" alt="pipeline" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/dexnex/rl_pipeline.png" alt="pipeline" style="max-width: 100%; height: auto;" />
 
 Pictured above is a diagram of the RL pipeline I designed. 
 
@@ -83,12 +83,12 @@ While our limited testing wasn't entirely successful, our results are still quit
 
 I also had the privilege of presenting my work to the lab and other faculty in both a final presentation and poster session. Below is a picture I took with my mentor Toby during my final research symposium.
 
-<img src="/assets/img/project_img/dexnex/jared_toby_poster.png" alt="poster" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/dexnex/jared_toby_poster.png" alt="poster" style="max-width: 100%; height: auto;" />
 
 Moving forward I will be continuing my work on the RL pipeline, and working to develop the Co-Training process. Below is my poster in more detail.
 
 <iframe 
-  src="/assets/img/project_img/dexnex/poster.pdf" 
+  src="../assets/img/project_img/dexnex/poster.pdf" 
   width="100%" 
   height="600px" 
   style="border: none;">

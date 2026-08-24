@@ -9,7 +9,7 @@ category: work
 
 This project was associated with Northwestern University ME 333: Mechatronics (Winter 2025).
 
-![motor_demo.gif](/assets/img/project_img/mot_con/motor_demo.gif)
+![motor_demo.gif](../assets/img/project_img/mot_con/motor_demo.gif)
 
 #### Objective
 The goal of this project was to create a motor controller in C on the PIC32MX270F256B microcontroller, with a Python client.
@@ -20,25 +20,25 @@ step trajectories, and cubic trajectories. There are also commands for reading s
 
 The motor is controlled using a variable 20 kHz PWM signal, the duty cycle of which is controlled by a PID controller inside a 5kHz ISR. The user can specify a constant PWM with duty cycle between -100 and 100 (bidirectional). An additional 200 Hz ISR with a PID position controller can be used to hold a constant angle or follow either a step or cubic trajectory. This is accomplished by calculating a desired motor torque, and then using the current controller to follow the current required for this torque. The Python client plots both reference and followed trajectories, and calculates a performance score.
 
-<img src="/assets/img/project_img/mot_con/block_diagram.png" alt="block diagram" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/mot_con/block_diagram.png" alt="block diagram" style="max-width: 100%; height: auto;" />
 
 The motor controller code runs on the PIC32 microcontroller, which controls most of the logic and runs on a 3.3V power supply. A Raspberry Pi Pico Mini is also used for reading the motor encoder data, which is then sent to the PIC32 with a UART connection. The PIC32 communicates with an INA219 current sensor using an I2C protocol for accurate motor current measurements. Lastly, a bidirectional H-Bridge with an external 6V power supply is used to allow for robust control of the motor. The PIC32 microcontroller is part of a circuit named the NU32 Dev Board, which is a breadboard setup used throughout the course. The controller circuit diagram is pictured below, followed by the diagram for the NU32 Dev Board.
 
-<img src="/assets/img/project_img/mot_con/controller_circuit.png" alt="controller circuit" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/mot_con/controller_circuit.png" alt="controller circuit" style="max-width: 100%; height: auto;" />
 
-<img src="/assets/img/project_img/mot_con/NU32dev_circuit.png" alt="NU32 dev circuit" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/mot_con/NU32dev_circuit.png" alt="NU32 dev circuit" style="max-width: 100%; height: auto;" />
 
 Lastly, the Python client provides the user with a wide array of commands to access the controller's various capabilities. It also contains functions for trajectory generation and plotting.
 
-<img src="/assets/img/project_img/mot_con/client_menu.png" alt="client menu" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/mot_con/client_menu.png" alt="client menu" style="max-width: 100%; height: auto;" />
 
 #### Results
 
 As seen in the video demo, the motor follows each trajectory precisely, and then holds the final position until directed otherwise. Additionally, the cubic trajectory plot and corresponding current controller gain error plot are included for reference.
 
-<img src="/assets/img/project_img/mot_con/cubic_plot.png" alt="cubic plot" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/mot_con/cubic_plot.png" alt="cubic plot" style="max-width: 100%; height: auto;" />
 
-<img src="/assets/img/project_img/mot_con/current_plot.png" alt="current plot" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/mot_con/current_plot.png" alt="current plot" style="max-width: 100%; height: auto;" />
 
 #### Software Format
 The software is split up into modules, each controlling a different task, peripheral, or sensor. Each module contains a header file and a corresponding .c file.

@@ -36,7 +36,7 @@ We broke the process up into 1 week milestones, over the span of an entire quart
 Below you can see a plot of the roll signal from our IMU during a testing sequence. The plot compares the signal before and after
 our filtering setup.
 
-<img src="/assets/img/project_img/drone/roll_plot.png" alt="filtering plot" style="max-width: 100%; height: auto;" />
+<img src="../assets/img/project_img/drone/roll_plot.png" alt="filtering plot" style="max-width: 100%; height: auto;" />
 
 ## Results
 Despite being terribly unskilled pilots, we were able to achieve stable manual flight with the dual-joystick controller in both ground-effect and above

@@ -96,7 +96,7 @@ END.
 #### Ergodic Control Description
 In this algorithm, iLQR is used to plan an ergodic trajectory by using an objective function based on the ergodic metric. The descent direction is found by solving the following optimization problem:
 
-For ergodic metric $$\mathcal{E}$$:
+For ergodic metric $\mathcal{E}$:
 
 $$
 J_{\mathcal{E}}(x(t), u(t)) =  
@@ -117,9 +117,9 @@ $$
 
 $$
 z(t) = 
-\underbrace{z_0}_{z_0 = 0} + \int_0^t 
-\underbrace{D_1 f(x(\tau)^{[k]}, u(\tau)^{[k]})}_{A(\tau)} \cdot z(\tau) + 
-\underbrace{D_2 f(x(\tau)^{[k]}, u(\tau)^{[k]})}_{B(\tau)} \cdot v(\tau)\, d\tau
+\underbrace{z_{0}}_{z_{0} = 0} + \int_0^t 
+\underbrace{D_{1} f(x(\tau)^{[k]}, u(\tau)^{[k]})}_{A(\tau)} \cdot z(\tau) + 
+\underbrace{D_{2} f(x(\tau)^{[k]}, u(\tau)^{[k]})}_{B(\tau)} \cdot v(\tau)\, d\tau
 $$
 
 The ergodic metric can be calculated by computing the Fourier transform of a target trajectory or distribution. In this specific case, the probability density function of the target distribution is estimated using Kernel Density Estimation (KDE) on the negative sensor readings. This distribution is then inverted before being passed into the iLQR, as the areas with many negative sensor readings should be avoided.
