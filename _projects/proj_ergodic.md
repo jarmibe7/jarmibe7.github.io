@@ -21,7 +21,7 @@ This project was associated with Northwestern University MECH_ENG 455: Active Le
 </div>
 
 #### Objective
-The simulation environment was created by Max Muchen Sun, and is an OpenAI-style training gym for the final project of MECH_ENG 455: Active Learning. It contains a sensor agent (robot) with 2D single integrator dynamics (controlled by velocity), a randomly generated box hidden from the robot, and a built-in prediction function that utilizes generative modeling techniques to predict possible box locations and dimensions given sensor reading history. 
+The simulation environment was created by Max Muchen Sun, and is an OpenAI-style training gym for the final project of MECH_ENG 455: Active Learning. It contains a sensor agent (robot) with 2D single integrator dynamics (controlled by velocity), a randomly generated box hidden from the robot, and a built-in prediction function that utilizes generative modeling techniques to visualize possible box locations and dimensions given sensor reading history. 
 
 The goal of this project was to control a robot to move across a space to collect signal measurements, such that the uncertainty (variance) of the box predictions drops below a predefined threshold as quickly as possible.
 

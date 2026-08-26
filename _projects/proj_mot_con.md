@@ -15,8 +15,7 @@ This project was associated with Northwestern University ME 333: Mechatronics (W
 The goal of this project was to create a motor controller in C on the PIC32MX270F256B microcontroller, with a Python client.
 
 #### Hardware and Project Description
-The motor controller and command menu is a robust interface that allows the user to specify constant speeds, contstant postions,
-step trajectories, and cubic trajectories. There are also commands for reading sensors and internal controller state. 
+The motor controller and command menu is a robust interface that allows the user to specify constant speeds, contstant postions, step trajectories, and cubic trajectories. There are also commands for reading sensors and internal controller state. 
 
 The motor is controlled using a variable 20 kHz PWM signal, the duty cycle of which is controlled by a PID controller inside a 5kHz ISR. The user can specify a constant PWM with duty cycle between -100 and 100 (bidirectional). An additional 200 Hz ISR with a PID position controller can be used to hold a constant angle or follow either a step or cubic trajectory. This is accomplished by calculating a desired motor torque, and then using the current controller to follow the current required for this torque. The Python client plots both reference and followed trajectories, and calculates a performance score.
 

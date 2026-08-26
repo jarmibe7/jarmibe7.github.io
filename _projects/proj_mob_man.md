@@ -29,8 +29,7 @@ from an initial condition with an arbitrary error relative to a desired trajecto
 The goal for this stage was to design an optimized controller that enables the youBot to perform a 
 pick-and-place task with minimal overshoot. This controller was tested with multiple pick-and-place
 tasks. Generally, the transient error converged quickly, and the youBot was able to perform all
-tasks successfully. The figure below is the result from one such pick-and-place task, demonstrating the convergence
-of the transient error after an incorrect initial configuration.
+tasks successfully. The figure below is the result from one such pick-and-place task, demonstrating the convergence of the transient error after an incorrect initial configuration.
 
 ![best_errors.png](../assets/img/project_img/mob_man/best_errors.png)
 

@@ -21,7 +21,7 @@ I've always loved soccer, and have been playing since I was a child. When I was 
 My system consists of 2 walls (left and right), a floor, a leg (represented as an actuated double pendulum) and a ball (represented by a cube). There are 5 state variables: the 2 pendulum angles, and the coordinates of the cube as well as its rotation. Planar gravity is acting on all objects in the system, with the double pendulum and cube also having planar rotational inertia.
 
 #### Process Outline
-All code is in an IPython Notebook, and organized into sections. This is the general structure:
+All code is in a Python notebook, and organized into sections. This is the general structure:
 
 1. Define system parameters and inertia matrices.
 2. Create helper functions for manipulating SE3 matrices (inverse, skew-symmetric, derivatives, conversion to 6-dimensional twist).

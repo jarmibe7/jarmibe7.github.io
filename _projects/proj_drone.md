@@ -20,8 +20,7 @@ This project was associated with Northwestern University ME 410: Quadrotor Desig
 
 ## Introduction
 #### Objective and Project Description
-The goal of this project was to achieve both manual and autonomous control of a pre-designed quadrotor, and also to learn the 
-industry standard principles behind quadrotor design and control. The project was completed in teams of 2 students.
+The goal of this project was to achieve both manual and autonomous control of a pre-designed quadrotor, and also to learn the industry standard principles behind quadrotor design and control. The project was completed in teams of 2 students.
 
 #### Process Outline
 We broke the process up into 1 week milestones, over the span of an entire quarter. Our controller design had the following features:
@@ -39,10 +38,6 @@ our filtering setup.
 <img src="../assets/img/project_img/drone/roll_plot.png" alt="filtering plot" style="max-width: 100%; height: auto;" />
 
 ## Results
-Despite being terribly unskilled pilots, we were able to achieve stable manual flight with the dual-joystick controller in both ground-effect and above
-ground domains. Additionally, we were able to achieve somewhat stable autonomous flight by holding the ArUco Marker in
-steady view of the on-board camera.
+Despite being terribly unskilled pilots, we were able to achieve stable manual flight with the dual-joystick controller in both ground-effect and above ground domains. Additionally, we were able to achieve somewhat stable autonomous flight by holding the ArUco Marker in steady view of the on-board camera.
 
-Potential improvements would include further PID tuning, a better camera attachment design for more even weight distribution, and
-improved filtering techniques for more robust state estimation with the camera setup. Unfortunately, we only had around 2 weeks to practice flying, 
-and the on-board battery had a very short life. I would've liked to be able to get better at piloting before testing our design.
+Potential improvements would include further PID tuning, a better camera attachment design for more even weight distribution, and improved filtering techniques for more robust state estimation with the camera setup. Unfortunately, we only had around 2 weeks to practice flying, and the on-board battery had a very short life. I would've liked to be able to get better at piloting before testing our design.

@@ -12,10 +12,7 @@ category: work
 
 ## [Paper Link Here](https://ieeexplore.ieee.org/abstract/document/11063104)
 
-The following is a description of my contributions to a paper I co-authored with Dr. Shusuke Okita and others during my time at
-Shirley Ryan AbilityLab in Chicago, IL. It originally started as my summer internship project, but my results were very promising so it was extended
-into a conference paper. Our paper was published to the 19th International Conference on Rehabilitation Robotics (ICORR) in May 2025, and was a finalist
-for overall Best Paper. I received a grant from Northwestern to attend the conference with my co-authors.
+The following is a description of my contributions to a paper I co-authored with Dr. Shusuke Okita and others during my time at Shirley Ryan AbilityLab in Chicago, IL. It originally started as my summer internship project, but my results were very promising so it was extended into a conference paper. Our paper was published to the 19th International Conference on Rehabilitation Robotics (ICORR) in May 2025, and was a finalist for overall Best Paper. I received a grant from Northwestern to attend the conference with my co-authors.
 
 For a complete copy of the paper, feel free to send me an email. Due to Shirley Ryan AbilityLab policy, data and code will not be publicly available.
 
